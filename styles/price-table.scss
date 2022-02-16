@@ -1,0 +1,124 @@
+.table {
+  display: flex;
+  flex-direction: row;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  height: 770px;
+  background-color: $background-price-card;
+  margin-right: 18px;
+  overflow: hidden;
+
+  .first-card {
+    background-color: $green;
+  }
+
+  .second-card {
+    background-color: $blue;
+  }
+
+  .third-card {
+    background-color: $orange;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &:nth-child(2) {
+    .price-card__title {
+      margin-top: 8px;
+    }
+  }
+
+  .red-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dc3f45;
+    text-transform: uppercase;
+    width: 147px;
+    height: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 32px;
+    right: -265px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-top: 33px;
+    text-align: center;
+    font-size: 35px;
+    line-height: 43px;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 33px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 105px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 67px;
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    margin: 40px 26px;
+    margin-bottom: 40px;
+  }
+
+  &__options-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    .price-card__picture {
+      margin: 0 22px;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      width: 100%;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 18px;
+
+      &:nth-of-type(odd) {
+        background-color: $background-odd-item;
+      }
+    }
+  }
+
+  &__order-btn {
+    color: $text-color;
+    height: 40px;
+    width: 154px;
+    border: 0;
+    border-radius: 20px;
+    margin: 40px auto;
+  }
+}
